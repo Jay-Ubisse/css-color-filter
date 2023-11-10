@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr valign="top">
+            <td width="50%">
+                <fieldset>
+                    <p>
+                        <label>Target color</label> <input class="target" type="text" placeholder="target hex"
+                            value="#00a4d6" />
+                    </p>
+                    <button class="execute">Compute Filters</button>
+                </fieldset>
+                <p>Real pixel, color applied through CSS <code>background-color</code>:</p>
+                <div class="pixel realPixel"></div>
+
+                <p>Filtered pixel, color applied through CSS <code>filter</code>:</p>
+                <div class="pixel filterPixel"></div>
+
+                <p class="filterDetail"></p>
+                <p class="lossDetail"></p>
+            </td>
+            <td>
+
+                <p>
+                    Para que este código funcione bem, a cor inicial precisa ser preta. Se o conjunto de ícones não for
+                    preta, você pode anexar "brightness(0) saturate(100%)" à sua propriedade de filtro, que primeiro
+                    transformará o conjunto de ícones em preto.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
